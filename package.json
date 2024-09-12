@@ -1,0 +1,19 @@
+{
+  "name": "Kee",
+  "version": "0.0.1",
+  "description": "An ethereum smart contract to pack labeled addresses on chain.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Farrell",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10",
+    "prettier": "^3.3.3",
+    "prettier-plugin-solidity": "^1.4.1",
+    "solhint": "^5.0.3"
+  }
+}
