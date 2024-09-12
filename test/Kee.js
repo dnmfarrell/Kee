@@ -22,7 +22,7 @@ describe("Kee contract", function () {
         await addr2.getAddress(),
       ];
       label = "foo";
-      bytes = ethers.zeroPadBytes(ethers.toUtf8Bytes(label), 32);
+      bytes = ethers.encodeBytes32String(label);
       await hardhatKee.mint(
         bytes,
         ethers.solidityPacked(["address", "address", "address"], addrs),
@@ -59,7 +59,7 @@ describe("Kee contract", function () {
         await addr2.getAddress(),
       ];
       label = "foo";
-      bytes = ethers.zeroPadBytes(ethers.toUtf8Bytes(label), 32);
+      bytes = ethers.encodeBytes32String(label);
       packed = ethers.solidityPacked(["address", "address", "address"], addrs);
       padded = ethers.zeroPadBytes(packed, 64); // two 32 byte words
       [labelDecoded, [ownerDecoded, addr1Decoded, addr2Decoded]] =
